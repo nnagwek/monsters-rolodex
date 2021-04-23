@@ -12,9 +12,9 @@ class App extends Component {
       searchField: "",
     };
   }
-
+  // https://jsonplaceholder.typicode.com/users
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users", {
+    fetch("https://reqres.in/api/users/", {
       method: "GET",
       mode: "no-cors",
       headers: {
