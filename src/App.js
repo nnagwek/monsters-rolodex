@@ -15,10 +15,19 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://jsonplaceholder.typicode.com/users").then((response) => {
-      console.log(response.data);
-      this.setState({ monsters: response.data });
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/users", {
+        method: "GET",
+        mode: "no-cors",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        this.setState({ monsters: response.data });
+      });
   }
   handleChange = (e) => {
     this.setState({ searchField: e.target.value });
