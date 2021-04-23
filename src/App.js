@@ -1,6 +1,5 @@
 import { Component } from "react";
 import "./App.css";
-import axios from "axios";
 import { CardList } from "./components/card-list/card-list.component";
 import { SearchBox } from "./components/search-box/search-box.component";
 
@@ -20,7 +19,6 @@ class App extends Component {
       mode: "no-cors",
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
       },
     }).then((response) => {
       console.log(response.data);

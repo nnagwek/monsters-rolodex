@@ -22,7 +22,6 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
-  "proxy": "https://jsonplaceholder.typicode.com",
   "eslintConfig": {
     "extends": [
       "react-app",
